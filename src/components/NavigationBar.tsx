@@ -132,7 +132,7 @@ export function NavigationBar() {
         {/* Mobile Navigation Menu */}
         <div className={cn(
           "md:hidden transition-all duration-300 overflow-hidden border-t border-border/20",
-          isMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          isMenuOpen ? "max-h-[25rem] opacity-100" : "max-h-0 opacity-0"
         )}>
           <div className="py-4 space-y-1">
             {navigationItems.map((item) => {

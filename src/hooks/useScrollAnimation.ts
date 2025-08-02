@@ -32,8 +32,3 @@ export const useScrollAnimation = () => {
 
   return elementsRef;
 };
-
-// Initialize scroll animations
-export const initScrollAnimations = () => {
-  useScrollAnimation();
-};

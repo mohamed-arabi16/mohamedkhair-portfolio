@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import { analytics } from "@/lib/analytics";
 
+// Define the LayoutShift interface based on the Performance API
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
 interface PerformanceObserverComponentProps {
   children: React.ReactNode;
 }
@@ -22,7 +27,7 @@ export function PerformanceObserver({ children }: PerformanceObserverComponentPr
           // First Input Delay (FID)
           const fidObserver = new window.PerformanceObserver((entryList) => {
             for (const entry of entryList.getEntries()) {
-              const fidEntry = entry as any;
+              const fidEntry = entry as PerformanceEventTiming;
               analytics.event('web_vital', 'Performance', 'FID', Math.round(fidEntry.processingStart - fidEntry.startTime));
             }
           });
@@ -32,7 +37,7 @@ export function PerformanceObserver({ children }: PerformanceObserverComponentPr
           let clsValue = 0;
           const clsObserver = new window.PerformanceObserver((entryList) => {
             for (const entry of entryList.getEntries()) {
-              const clsEntry = entry as any;
+              const clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
               }

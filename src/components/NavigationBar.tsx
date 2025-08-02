@@ -41,7 +41,7 @@ export function NavigationBar() {
   const navigationItems = getNavigationItems(t);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/90 border-b border-border/20 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-border/20 shadow-sm motion-enhanced">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

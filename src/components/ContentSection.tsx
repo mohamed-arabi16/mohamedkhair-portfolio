@@ -137,11 +137,11 @@ export function ContentSection() {
                 </div>
               </div>
 
-              <div className="p-6 flex-1 flex flex-col">
+              <div className="p-6 flex-1 flex flex-col card-content">
                 <h3 className="font-bold text-lg mb-2 group-hover:text-accent transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-zinc-600 dark:text-zinc-300 text-sm mb-4 flex-1">
+                <p className="text-muted-foreground text-sm mb-4 flex-1">
                   {item.description}
                 </p>
                 

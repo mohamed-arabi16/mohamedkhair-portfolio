@@ -138,7 +138,7 @@ export function WorkSection() {
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
+              <div className="p-6 card-content">
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-xl font-bold group-hover:text-accent transition-colors">
                     {project.title}

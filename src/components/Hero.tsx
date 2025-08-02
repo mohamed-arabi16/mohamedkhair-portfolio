@@ -25,12 +25,12 @@ export function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif mb-6 leading-tight">
-            <span className="text-white drop-shadow-lg">Full-Stack</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif mb-6 leading-tight motion-enhanced">
+            <span className="text-white drop-shadow-lg fade-in animate-delay-100">Full-Stack</span>
             <br />
-            <span className="text-accent drop-shadow-lg">Developer</span>
+            <span className="text-accent drop-shadow-lg bounce-in animate-delay-200">Developer</span>
             <br />
-            <span className="text-white drop-shadow-lg">& Content Creator</span>
+            <span className="text-white drop-shadow-lg slide-up animate-delay-300">& Content Creator</span>
           </h1>
           
           {/* Subtitle */}
@@ -63,16 +63,16 @@ export function Hero() {
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            <GlassPanel className="hero-stat p-6 text-center backdrop-blur-xl bg-white/10 border-white/20 hover:bg-white/20 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto motion-enhanced">
+            <GlassPanel className="hero-stat p-6 text-center floating animate-delay-100 pulse-glow">
               <div className="text-3xl font-bold text-hero-stat-number mb-1">50+</div>
               <div className="text-hero-stat-text">Projects Completed</div>
             </GlassPanel>
-            <GlassPanel className="hero-stat p-6 text-center backdrop-blur-xl bg-white/10 border-white/20 hover:bg-white/20 transition-all duration-300">
+            <GlassPanel className="hero-stat p-6 text-center floating animate-delay-200 pulse-glow">
               <div className="text-3xl font-bold text-hero-stat-number mb-1">150K+</div>
               <div className="text-hero-stat-text">Content Views</div>
             </GlassPanel>
-            <GlassPanel className="hero-stat p-6 text-center backdrop-blur-xl bg-white/10 border-white/20 hover:bg-white/20 transition-all duration-300">
+            <GlassPanel className="hero-stat p-6 text-center floating animate-delay-300 pulse-glow">
               <div className="text-3xl font-bold text-hero-stat-number mb-1">92%</div>
               <div className="text-hero-stat-text">Client Satisfaction</div>
             </GlassPanel>

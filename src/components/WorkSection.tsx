@@ -59,15 +59,15 @@ const projects: Project[] = [
 ];
 
 const stackColors: Record<string, string> = {
-  "Next.js": "bg-black text-white",
-  "React": "bg-blue-100 text-blue-800",
-  "Supabase": "bg-green-100 text-green-800",
-  "TypeScript": "bg-blue-100 text-blue-900",
-  "Tailwind": "bg-cyan-100 text-cyan-800",
-  "shadcn/ui": "bg-gray-100 text-gray-800",
-  "Recharts": "bg-purple-100 text-purple-800",
-  "Framer Motion": "bg-pink-100 text-pink-800",
-  "Lovable": "bg-purple-100 text-purple-800"
+  "Next.js": "bg-foreground text-background",
+  "React": "bg-blue-500/10 text-blue-600 dark:text-blue-400",
+  "Supabase": "bg-green-500/10 text-green-600 dark:text-green-400",
+  "TypeScript": "bg-blue-500/10 text-blue-700 dark:text-blue-300",
+  "Tailwind": "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400",
+  "shadcn/ui": "bg-muted text-muted-foreground",
+  "Recharts": "bg-purple-500/10 text-purple-600 dark:text-purple-400",
+  "Framer Motion": "bg-pink-500/10 text-pink-600 dark:text-pink-400",
+  "Lovable": "bg-purple-500/10 text-purple-600 dark:text-purple-400"
 };
 
 export function WorkSection() {
@@ -150,7 +150,7 @@ export function WorkSection() {
                   )}
                 </div>
 
-                <p className="text-zinc-600 dark:text-zinc-300 mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed">
                   {project.summary}
                 </p>
 
@@ -160,7 +160,7 @@ export function WorkSection() {
                     <Badge 
                       key={tech} 
                       variant="outline"
-                      className={stackColors[tech] || "bg-gray-100 text-gray-800"}
+                      className={stackColors[tech] || "bg-muted text-muted-foreground"}
                     >
                       {tech}
                     </Badge>

@@ -2,8 +2,12 @@ import { useState } from "react";
 import { GlassPanel } from "./GlassPanel";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
 import { useLanguage } from "./LanguageProvider";
 import projectShowcaseImg from "@/assets/project-showcase.jpg";
+import qobouliProgramsPreview from "@/assets/qobouli-programs-preview.jpg";
+import qobouliTrackingPreview from "@/assets/qobouli-tracking-preview.jpg";
+import karidesciPreview from "@/assets/karidesci-preview.jpg";
 
 interface Project {
   id: string;
@@ -27,7 +31,7 @@ const projects: Project[] = [
       { label: "Avg. TTFB", value: "180 ms" },
       { label: "Leads", value: "+32%" }
     ],
-    thumbnail: "https://qobouli.com",
+    thumbnail: qobouliProgramsPreview,
     featured: true
   },
   {
@@ -40,7 +44,7 @@ const projects: Project[] = [
       { label: "User Retention", value: "89%" },
       { label: "Load Time", value: "1.2s" }
     ],
-    thumbnail: "https://track.qobouli.com",
+    thumbnail: qobouliTrackingPreview,
     featured: true
   },
   {
@@ -53,7 +57,7 @@ const projects: Project[] = [
       { label: "Lighthouse Score", value: "98" },
       { label: "User Engagement", value: "+150%" }
     ],
-    thumbnail: "https://karidesci-revive.lovable.app",
+    thumbnail: karidesciPreview,
     featured: false
   }
 ];
@@ -128,12 +132,11 @@ export function WorkSection() {
             <GlassPanel key={project.id} interactive className="group overflow-hidden">
               {/* Project Preview */}
               <div className="aspect-video bg-muted rounded-t-[var(--radius-glass)] overflow-hidden">
-                <iframe 
+                <img 
                   src={project.thumbnail} 
-                  title={project.title}
-                  className="w-full h-full border-0 transition-transform duration-500 group-hover:scale-105"
+                  alt={`${project.title} preview`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
-                  sandbox="allow-scripts allow-same-origin"
                 />
               </div>
 

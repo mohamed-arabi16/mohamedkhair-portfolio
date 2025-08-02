@@ -183,6 +183,12 @@
     overflow: hidden;
   }
   
+  /* Sharp edges for navbar */
+  .glass-panel.navbar-glass {
+    border-radius: 0;
+    border-top: none;
+  }
+  
   .glass-panel::before {
     content: '';
     @apply absolute inset-0 rounded-[var(--radius-glass)];

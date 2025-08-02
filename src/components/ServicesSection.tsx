@@ -71,17 +71,15 @@ export function ServicesSection() {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service) => {
-            const Icon = service.icon;
-            return (
-              <GlassPanel key={service.id} interactive className="p-8 group">
-                <div className="mb-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10 text-accent mb-4">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
-                    {service.title}
-                  </h3>
+          {services.map((service) => (
+            <GlassPanel key={service.id} interactive className="p-8 group">
+              <div className="mb-6">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10 text-accent mb-4">
+                  <service.icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
+                  {service.title}
+                </h3>
                   <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
@@ -122,8 +120,7 @@ export function ServicesSection() {
                   )}
                 </Button>
               </GlassPanel>
-            );
-          })}
+            ))}
         </div>
 
         {/* Collaboration Notice */}

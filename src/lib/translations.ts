@@ -2,11 +2,8 @@ export const translations = {
   en: {
     // Navigation
     'nav.home': 'Home',
-    'nav.projects': 'Projects',
-    'nav.content': 'Content',
+    'nav.work': 'Work',
     'nav.services': 'Services',
-    'nav.qobouli': 'Qobouli',
-    'nav.clientSuccess': 'Client Success',
     'nav.contact': 'Contact',
 
     // Hero Section
@@ -103,11 +100,8 @@ export const translations = {
   ar: {
     // Navigation
     'nav.home': 'الرئيسية',
-    'nav.projects': 'المشاريع',
-    'nav.content': 'المحتوى',
+    'nav.work': 'الأعمال',
     'nav.services': 'الخدمات',
-    'nav.qobouli': 'قبولي',
-    'nav.clientSuccess': 'نجاح العملاء',
     'nav.contact': 'تواصل معنا',
 
     // Hero Section

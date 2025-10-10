@@ -13,24 +13,19 @@ export function Hero() {
         <img 
           src={heroImage} 
           alt="Development workspace" 
-          className="w-full h-full object-cover blur-sm"
+          className="w-full h-full object-cover blur-[2px]"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-dark/80 via-background/70 to-accent/20" />
+        <div className="absolute inset-0 bg-background/60" />
       </div>
-      
-      {/* Noise texture overlay */}
-      <div className="absolute inset-0 noise-texture opacity-20" />
       
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif mb-6 leading-tight motion-enhanced">
-            <span className="text-white drop-shadow-lg fade-in animate-delay-100">Full-Stack</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif mb-6 leading-tight animate-fade-in">
+            <span className="text-foreground drop-shadow-lg">Full-Stack Developer & Content Creator</span>
             <br />
-            <span className="text-accent drop-shadow-lg bounce-in animate-delay-200">Developer</span>
-            <br />
-            <span className="text-white drop-shadow-lg slide-up animate-delay-300">& Content Creator</span>
+            <span className="text-muted-foreground text-2xl md:text-3xl">based in Istanbul</span>
           </h1>
           
           {/* Subtitle */}
@@ -40,41 +35,35 @@ export function Hero() {
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col items-center gap-4 mb-16">
             <Link to="/projects">
               <Button 
                 size="lg" 
-                className="btn-liquid btn-accent px-8 py-4 text-lg shadow-lg w-full sm:w-auto"
+                className="btn-liquid btn-accent px-8 py-4 text-lg shadow-lg"
               >
                 View My Work
                 <ChevronRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             
-            <Link to="/contact">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="btn-liquid px-8 py-4 text-lg bg-white/10 border-white/20 text-white hover:bg-white/20 shadow-lg w-full sm:w-auto"
-              >
-                Let's Connect
-              </Button>
+            <Link to="/contact" className="text-sm text-muted-foreground hover:text-accent transition-colors">
+              or contact me directly →
             </Link>
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto motion-enhanced">
-            <GlassPanel className="hero-stat p-6 text-center floating animate-delay-100 pulse-glow">
-              <div className="text-3xl font-bold text-hero-stat-number mb-1">50+</div>
-              <div className="text-hero-stat-text">Projects Completed</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+            <GlassPanel className="hero-stat p-6 text-center animate-fade-in">
+              <div className="text-3xl font-bold text-accent mb-1">50+</div>
+              <div className="text-sm text-muted-foreground">Projects Completed</div>
             </GlassPanel>
-            <GlassPanel className="hero-stat p-6 text-center floating animate-delay-200 pulse-glow">
-              <div className="text-3xl font-bold text-hero-stat-number mb-1">150K+</div>
-              <div className="text-hero-stat-text">Content Views</div>
+            <GlassPanel className="hero-stat p-6 text-center animate-fade-in">
+              <div className="text-3xl font-bold text-accent mb-1">150K+</div>
+              <div className="text-sm text-muted-foreground">Content Views</div>
             </GlassPanel>
-            <GlassPanel className="hero-stat p-6 text-center floating animate-delay-300 pulse-glow">
-              <div className="text-3xl font-bold text-hero-stat-number mb-1">92%</div>
-              <div className="text-hero-stat-text">Client Satisfaction</div>
+            <GlassPanel className="hero-stat p-6 text-center animate-fade-in">
+              <div className="text-3xl font-bold text-accent mb-1">92%</div>
+              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
             </GlassPanel>
           </div>
         </div>

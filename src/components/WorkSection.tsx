@@ -12,53 +12,28 @@ import karidesciPreview from "@/assets/karidesci-preview.jpg";
 interface Project {
   id: string;
   title: string;
-  summary: string;
-  role: string[];
+  description: string;
+  role: string;
   stack: string[];
-  impact: { label: string; value: string }[];
   thumbnail: string;
-  featured: boolean;
 }
 
 const projects: Project[] = [
   {
     id: "qobouli-programs",
     title: "Qobouli Programs Browser",
-    summary: "Filter Turkish university programs by net tuition with advanced search capabilities.",
-    role: ["Product", "Full-stack"],
+    description: "Built a comprehensive university program search platform helping Arab students filter 1000+ Turkish university programs by tuition, city, and major. As product lead and full-stack developer, I designed the UX and implemented real-time search with Next.js and Supabase.",
+    role: "Product Lead & Full-Stack Developer",
     stack: ["Next.js", "Supabase", "shadcn/ui"],
-    impact: [
-      { label: "Avg. TTFB", value: "180 ms" },
-      { label: "Leads", value: "+32%" }
-    ],
-    thumbnail: qobouliProgramsPreview,
-    featured: true
+    thumbnail: qobouliProgramsPreview
   },
   {
     id: "track-qobouli",
     title: "Qobouli Tracking System",
-    summary: "Real-time application tracking system for international students.",
-    role: ["Product", "Full-stack"],
+    description: "Created a student application tracking system that provides real-time updates on university application status. Designed the full user flow and built the frontend/backend, helping 250+ students monitor their applications efficiently.",
+    role: "Product Lead & Full-Stack Developer",
     stack: ["React", "TypeScript", "Supabase"],
-    impact: [
-      { label: "User Retention", value: "89%" },
-      { label: "Load Time", value: "1.2s" }
-    ],
-    thumbnail: qobouliTrackingPreview,
-    featured: true
-  },
-  {
-    id: "karidesci-revive",
-    title: "Karidesci Revival Project",
-    summary: "Modern recreation of a classic Turkish shrimp recipe platform.",
-    role: ["Design", "Frontend"],
-    stack: ["React", "Tailwind", "Lovable"],
-    impact: [
-      { label: "Lighthouse Score", value: "98" },
-      { label: "User Engagement", value: "+150%" }
-    ],
-    thumbnail: karidesciPreview,
-    featured: false
+    thumbnail: qobouliTrackingPreview
   }
 ];
 
@@ -142,20 +117,20 @@ export function WorkSection() {
 
               {/* Project Content */}
               <div className="p-6 card-content">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-xl font-bold group-hover:text-accent transition-colors">
-                    {project.title}
-                  </h3>
-                  {project.featured && (
-                    <Badge variant="secondary" className="bg-accent/10 text-accent">
-                      {t('projects.featured')}
-                    </Badge>
-                  )}
-                </div>
+                <h3 className="text-xl font-bold group-hover:text-accent transition-colors mb-3">
+                  {project.title}
+                </h3>
 
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {project.summary}
+                <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                  {project.description}
                 </p>
+
+                <div className="mb-4">
+                  <p className="text-xs text-muted-foreground mb-2">Role:</p>
+                  <Badge variant="secondary" className="bg-accent/10 text-accent">
+                    {project.role}
+                  </Badge>
+                </div>
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -170,23 +145,13 @@ export function WorkSection() {
                   ))}
                 </div>
 
-                {/* Impact Metrics */}
-                <div className="flex gap-4 mb-4">
-                  {project.impact.map(metric => (
-                    <div key={metric.label} className="text-center">
-                      <div className="text-lg font-bold text-accent">{metric.value}</div>
-                      <div className="text-xs text-muted-foreground">{metric.label}</div>
-                    </div>
-                  ))}
-                </div>
-
                 {/* CTA */}
                 <Button 
                   className="w-full btn-liquid btn-accent group-hover:scale-105"
                   onClick={() => window.open(project.thumbnail, '_blank')}
-                  aria-label={`${t('projects.visitSite')} - ${project.title}`}
+                  aria-label={`View ${project.title}`}
                 >
-                  {t('projects.visitSite')}
+                  View Case Study
                 </Button>
               </div>
             </GlassPanel>

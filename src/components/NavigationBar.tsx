@@ -11,11 +11,8 @@ import { Link, useLocation } from "react-router-dom";
 
 const getNavigationItems = (t: (key: string) => string) => [
   { name: t("nav.home"), href: "/" },
-  { name: t("nav.projects"), href: "/projects" },
-  { name: t("nav.content"), href: "/content" },
+  { name: t("nav.work"), href: "/projects" },
   { name: t("nav.services"), href: "/services" },
-  { name: t("nav.qobouli"), href: "/qobouli" },
-  { name: t("nav.clientSuccess"), href: "/client-success" },
   { name: t("nav.contact"), href: "/contact" },
 ];
 

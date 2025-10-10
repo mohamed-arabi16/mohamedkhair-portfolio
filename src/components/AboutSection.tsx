@@ -1,6 +1,6 @@
 import { GlassPanel } from "./GlassPanel";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Globe, Users, Lightbulb } from "lucide-react";
+import { Heart, Globe, Users, Lightbulb, Code, Palette, Languages } from "lucide-react";
 
 export function AboutSection() {
   return (
@@ -24,30 +24,13 @@ export function AboutSection() {
               <h3 className="text-2xl font-bold mb-6">My Story</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Born in <span className="text-foreground font-medium">Syria</span> and carrying 
-                  <span className="text-foreground font-medium"> Sudanese nationality</span>, 
-                  I now call <span className="text-foreground font-medium">Istanbul, Turkey</span> home. 
-                  My journey began with a degree in Computer Engineering, but life had different 
-                  plans that led me into the vibrant world of digital media.
+                  Syrian-born with Sudanese nationality, based in Istanbul. I'm a Computer Engineering graduate who evolved from technical work into digital media, now combining both worlds to create impactful web applications and content.
                 </p>
                 <p>
-                  What started as a technical background evolved into a passion for creating 
-                  engaging content and building web applications that solve real problems. 
-                  I've discovered that the intersection of technology and creativity is where 
-                  the most impactful solutions emerge.
+                  Co-founder of <span className="text-accent font-medium">Qobouli</span> with my wife—a free service helping Arab students navigate Turkish university applications. We bring diverse perspectives to every project, believing the best solutions emerge from collaboration.
                 </p>
                 <p>
-                  Working closely with my wife, we bring diverse perspectives to every project. 
-                  This collaboration has taught me that the best solutions often come from 
-                  combining different viewpoints and skill sets. Together, we've built 
-                  <span className="text-accent font-medium"> Qobouli</span>, helping international 
-                  students navigate university applications in Turkey.
-                </p>
-                <p>
-                  I believe in <span className="text-foreground font-medium">ethical work practices</span> 
-                  and <span className="text-foreground font-medium">complete transparency</span>. 
-                  Every project includes regular updates, honest communication, and a commitment 
-                  to delivering solutions that truly serve our clients' needs.
+                  I'm committed to <span className="text-foreground font-medium">ethical practices</span> and <span className="text-foreground font-medium">complete transparency</span>, delivering solutions with honest communication and regular updates that truly serve client needs.
                 </p>
               </div>
             </GlassPanel>
@@ -144,7 +127,7 @@ export function AboutSection() {
             {/* Technical Skills */}
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 rounded bg-accent/20"></div>
+                <Code className="w-8 h-8 text-accent" />
               </div>
               <h4 className="font-semibold mb-4 text-accent text-lg">Technical Skills</h4>
               <div className="grid grid-cols-2 gap-3">
@@ -161,16 +144,16 @@ export function AboutSection() {
             
             {/* Creative Skills */}
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-orange-accent/10 flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 rounded bg-orange-accent/20"></div>
+              <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                <Palette className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="font-semibold mb-4 text-orange-accent text-lg">Creative Skills</h4>
+              <h4 className="font-semibold mb-4 text-accent text-lg">Creative Skills</h4>
               <div className="grid grid-cols-2 gap-3">
                 {[
                   "Content Creation", "Instagram Reels", "Video Editing", 
                   "UI/UX Design", "Brand Strategy", "Storytelling"
                 ].map(skill => (
-                  <div key={skill} className="glass-panel px-3 py-2 text-sm font-medium bg-orange-accent/5 border-orange-accent/20">
+                  <div key={skill} className="glass-panel px-3 py-2 text-sm font-medium bg-accent/5 border-accent/20">
                     {skill}
                   </div>
                 ))}
@@ -179,15 +162,15 @@ export function AboutSection() {
             
             {/* Languages */}
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-teal-secondary/10 flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 rounded bg-teal-secondary/20"></div>
+              <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                <Languages className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="font-semibold mb-4 text-teal-secondary text-lg">Languages</h4>
+              <h4 className="font-semibold mb-4 text-accent text-lg">Languages</h4>
               <div className="space-y-3">
                 {[
                   "Arabic (Native)", "English (Fluent)", "Turkish (Conversational)"
                 ].map(lang => (
-                  <div key={lang} className="glass-panel px-4 py-3 text-sm font-medium bg-teal-secondary/5 border-teal-secondary/20">
+                  <div key={lang} className="glass-panel px-4 py-3 text-sm font-medium bg-accent/5 border-accent/20">
                     {lang}
                   </div>
                 ))}

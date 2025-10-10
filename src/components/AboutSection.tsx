@@ -8,7 +8,7 @@ export function AboutSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             About <span className="text-accent">Mohamed</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -21,7 +21,7 @@ export function AboutSection() {
           {/* Main Bio */}
           <div className="lg:col-span-2">
             <GlassPanel className="p-8 h-full">
-              <h3 className="text-2xl font-bold mb-6">My Story</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">My Story</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Syrian-born with Sudanese nationality, based in Istanbul. I'm a Computer Engineering graduate who evolved from technical work into digital media, now combining both worlds to create impactful web applications and content.
@@ -41,7 +41,7 @@ export function AboutSection() {
             <GlassPanel className="p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Globe className="w-5 h-5 text-accent" />
-                <h4 className="font-semibold">Global Perspective</h4>
+                <h4 className="font-semibold text-foreground">Global Perspective</h4>
               </div>
               <p className="text-sm text-muted-foreground">
                 Syria-born, Sudanese national, Istanbul-based. Bringing multicultural 
@@ -52,7 +52,7 @@ export function AboutSection() {
             <GlassPanel className="p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Lightbulb className="w-5 h-5 text-accent" />
-                <h4 className="font-semibold">Career Evolution</h4>
+                <h4 className="font-semibold text-foreground">Career Evolution</h4>
               </div>
               <p className="text-sm text-muted-foreground">
                 Computer Engineering graduate turned digital media specialist, 
@@ -63,7 +63,7 @@ export function AboutSection() {
             <GlassPanel className="p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="w-5 h-5 text-accent" />
-                <h4 className="font-semibold">Collaborative Approach</h4>
+                <h4 className="font-semibold text-foreground">Collaborative Approach</h4>
               </div>
               <p className="text-sm text-muted-foreground">
                 Working in partnership with my wife, bringing diverse perspectives 
@@ -74,7 +74,7 @@ export function AboutSection() {
             <GlassPanel className="p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Heart className="w-5 h-5 text-accent" />
-                <h4 className="font-semibold">Core Values</h4>
+                <h4 className="font-semibold text-foreground">Core Values</h4>
               </div>
               <p className="text-sm text-muted-foreground">
                 Ethical practices, transparency, and meaningful technology that 
@@ -90,7 +90,7 @@ export function AboutSection() {
             <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
               <Heart className="w-6 h-6 text-accent" />
             </div>
-            <h4 className="font-semibold mb-3">Ethical First</h4>
+            <h4 className="font-semibold text-foreground mb-3">Ethical First</h4>
             <p className="text-sm text-muted-foreground">
               Every project is built on a foundation of honest communication, 
               fair practices, and mutual respect.
@@ -101,7 +101,7 @@ export function AboutSection() {
             <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
               <Globe className="w-6 h-6 text-accent" />
             </div>
-            <h4 className="font-semibold mb-3">Global Mindset</h4>
+            <h4 className="font-semibold text-foreground mb-3">Global Mindset</h4>
             <p className="text-sm text-muted-foreground">
               Drawing from multicultural experiences to create solutions 
               that work across different contexts and communities.
@@ -112,7 +112,7 @@ export function AboutSection() {
             <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
               <Users className="w-6 h-6 text-accent" />
             </div>
-            <h4 className="font-semibold mb-3">Collaborative Spirit</h4>
+            <h4 className="font-semibold text-foreground mb-3">Collaborative Spirit</h4>
             <p className="text-sm text-muted-foreground">
               Believing that the best solutions emerge from combining 
               different perspectives and working together.
@@ -122,7 +122,7 @@ export function AboutSection() {
 
         {/* Skills & Expertise - Improved Layout */}
         <GlassPanel className="p-8">
-          <h3 className="text-2xl font-bold mb-8 text-center">Skills & Expertise</h3>
+          <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Skills & Expertise</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Technical Skills */}
             <div className="text-center">
@@ -135,7 +135,7 @@ export function AboutSection() {
                   "React", "Next.js", "TypeScript", "Node.js", "Supabase", 
                   "Tailwind CSS", "Git", "API Development"
                 ].map(skill => (
-                  <div key={skill} className="glass-panel px-3 py-2 text-sm font-medium bg-accent/5 border-accent/20">
+                  <div key={skill} className="glass-panel px-3 py-2 text-sm font-medium text-foreground bg-accent/5 border-accent/20">
                     {skill}
                   </div>
                 ))}
@@ -153,7 +153,7 @@ export function AboutSection() {
                   "Content Creation", "Instagram Reels", "Video Editing", 
                   "UI/UX Design", "Brand Strategy", "Storytelling"
                 ].map(skill => (
-                  <div key={skill} className="glass-panel px-3 py-2 text-sm font-medium bg-accent/5 border-accent/20">
+                  <div key={skill} className="glass-panel px-3 py-2 text-sm font-medium text-foreground bg-accent/5 border-accent/20">
                     {skill}
                   </div>
                 ))}
@@ -170,7 +170,7 @@ export function AboutSection() {
                 {[
                   "Arabic (Native)", "English (Fluent)", "Turkish (Conversational)"
                 ].map(lang => (
-                  <div key={lang} className="glass-panel px-4 py-3 text-sm font-medium bg-accent/5 border-accent/20">
+                  <div key={lang} className="glass-panel px-4 py-3 text-sm font-medium text-foreground bg-accent/5 border-accent/20">
                     {lang}
                   </div>
                 ))}

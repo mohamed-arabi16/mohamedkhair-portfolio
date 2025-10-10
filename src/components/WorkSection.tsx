@@ -72,7 +72,7 @@ export function WorkSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-serif">
             {t('projects.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -117,7 +117,7 @@ export function WorkSection() {
 
               {/* Project Content */}
               <div className="p-6 card-content">
-                <h3 className="text-xl font-bold group-hover:text-accent transition-colors mb-3">
+                <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors mb-3">
                   {project.title}
                 </h3>
 

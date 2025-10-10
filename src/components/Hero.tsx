@@ -25,11 +25,11 @@ export function Hero() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif mb-6 leading-tight animate-fade-in">
             <span className="text-foreground drop-shadow-lg">Full-Stack Developer & Content Creator</span>
             <br />
-            <span className="text-muted-foreground text-2xl md:text-3xl">based in Istanbul</span>
+            <span className="text-foreground/70 text-2xl md:text-3xl">based in Istanbul</span>
           </h1>
           
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+          <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
             Syrian-born, Sudanese developer in Istanbul crafting lightning-fast web applications 
             and viral content that drives real results.
           </p>
@@ -46,7 +46,7 @@ export function Hero() {
               </Button>
             </Link>
             
-            <Link to="/contact" className="text-sm text-muted-foreground hover:text-accent transition-colors">
+            <Link to="/contact" className="text-sm text-foreground/60 hover:text-accent transition-colors">
               or contact me directly →
             </Link>
           </div>
@@ -71,7 +71,7 @@ export function Hero() {
       
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ArrowDown className="h-6 w-6 text-white/70" />
+        <ArrowDown className="h-6 w-6 text-foreground/50" />
       </div>
     </section>
   );
